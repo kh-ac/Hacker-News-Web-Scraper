@@ -34,7 +34,7 @@ if __name__ == "__main__":
 
          # We use regex here to find the correct element
         itemComments = nextRow.find("a" , string = re.compile("\d+(&nbsp;|\s)comment(s?)"))
-        itemComments = itemComments.getText(strip = True).replace("\xa0"," ") if itemComments else None
+        itemComments = itemComments.getText(strip = True).replace("\xa0"," ") if itemComments else "0 comments"
 
         articles.append({
             "title" : itemText,
