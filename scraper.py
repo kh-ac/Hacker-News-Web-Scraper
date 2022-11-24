@@ -30,7 +30,7 @@ if __name__ == "__main__":
         
 
         itemScore = nextRow.find("span" , {"class" : "score"}) 
-        itemScore = itemScore.getText(strip = True) if itemScore else None
+        itemScore = itemScore.getText(strip = True) if itemScore else "0 points"
 
          # We use regex here to find the correct element
         itemComments = nextRow.find("a" , string = re.compile("\d+(&nbsp;|\s)comment(s?)"))
